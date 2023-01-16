@@ -4,7 +4,7 @@ describe('Verifies Posts',()=>{
             expect(response.status).to.eq(200)     
     })
 })
-  it("To verify and validate Results by Author",()=>{
+  it("To ashok and validate Results by Author",()=>{
         cy.request('https://www.rijksmuseum.nl/api/nl/collection?key=0fiuZFh4&involvedMaker=Rembrandt+van+Rijn')
         .then((response)=>
         {   
