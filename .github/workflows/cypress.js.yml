@@ -2,21 +2,18 @@
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
 
 name: Cypress Tests
-
 on:
   push:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
-
 jobs:
-  build:
-
+  cypress-run:
     runs-on: macos-latest
     steps:
-     -name: Checkout
-      uses: actions/checkout@v3
-     -name: Run Tests
-      uses: cypress-io/github-action@v5
-      start: "npx cypress run"
+     - name: Checkout
+       uses: actions/checkout@v1
+     - name: Run Tests
+       uses: cypress-io/github-action@v5
+       start: "npx cypress run"
         
